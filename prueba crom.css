@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cuerpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.circle-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 50px;
+}
+
+.color-circle {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-circle:hover {
+  transform: scale(1.2);
+}
+
+.color-info {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.color-info-small {
+  display: none;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.color-info {
+  width: 250px;
+}
+
+.color-info-small {
+  width: 220px;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+.color-circle:hover + .color-info,
+.color-circle:hover + .color-info + .color-info-small {
+  display: block;
+}
+
+/* Positioning the color circles */
+#amarillo { top: 10%; left: 50%; background: yellow; transform: translate(-50%, -50%); }
+#naranja { top: 30%; left: 85%; background: orange; transform: translate(-50%, -50%); }
+#rojo { top: 70%; left: 85%; background: red; transform: translate(-50%, -50%); }
+#violeta { top: 90%; left: 50%; background: rgb(88, 53, 129); transform: translate(-50%, -50%); }
+#azul { top: 70%; left: 15%; background: blue; transform: translate(-50%, -50%); }
+#verde { top: 30%; left: 15%; background: green; transform: translate(-50%, -50%); }
+
+#blanco { top: 120%; left: 50%; background: white; transform: translate(-50%, -50%); border: 1px solid #ccc; }
+#gris { top: 10%; left: -10%; background: gray; transform: translate(-50%, -50%); }
+#negro { top: 10%; left: 110%; background: black; transform: translate(-50%, -50%); }
+
+.line-container {
+  display: none; /* Hide the line container */
+}
