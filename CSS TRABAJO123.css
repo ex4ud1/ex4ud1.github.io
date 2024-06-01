@@ -30,16 +30,25 @@ h1{
 	text-transform: uppercase;
 }
 
-h2, h3{
+h2, h3, h4{
 	margin-top: 3%;
 	margin-bottom: 2%;
 	color:#c14d4d ;
 	width: 100%;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 h3 {
 	margin: 0;
+	color: #ff695f;
+}
+
+h4 {
+	text-transform: uppercase;
+	color: #772d2d;
+	font-weight: 400;
+	font-style
 }
 
 p {
@@ -126,6 +135,7 @@ nav a {
 	font-weight:bolder;
 	font-size: larger;
 	padding: 16px 15px;
+	margin: 1 1;
 }
 
 nav a:hover {
@@ -221,15 +231,16 @@ nav a.active {
 	background: #fff;
 	text-align: center;
 }
- section#about, section#contact {
-	background: #fff;
-	color: #d35151;
+section#contact {
 	text-align: center;
 }
- section#portfolio {
-	background: #fff;
-	color: #d35151;
-	text-align: left;
+
+section#contact a {
+	background-image: url(imagenes/Instagram_icon.png);
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	display: block;
 }
 
  footer {
@@ -249,10 +260,10 @@ nav a.active {
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
-	 width: 30vw;
-	 margin-left:auto;
-	 margin-right:auto;
-	 margin-bottom: 2%;
+	width: 30vw;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 2%;
 }
  .gallery-item {
 	flex: 0 0 auto;
@@ -307,8 +318,8 @@ nav a.active {
 }
  .galeria img {
 	width: 11vw;
-	 margin: 1.75vw;
-	 display: inline-block;
+	margin: 1.75vw;
+	display: inline-block;
 	text-align: center;
 }
  .galeria figcaption {
@@ -328,6 +339,41 @@ nav a.active {
  #bot4:hover ~ .tira {
 	left: -46vw;
 }
+
+/* TEORIA DEL COLOR*/
+
+.color-theory{
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.color-theory article{
+	flex: 1;
+}
+
+.color-theory-tile-container {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.color-theory-tile {
+	width: 25%;
+	height: auto;
+	flex: 1;
+}
+
+#rgb-mix-tile {
+	width: 500%;
+}
+
+.art-teoria-model-rgb-mix {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+
+
 
 /* PSICOLOGIA DEL COLOR*/
 
@@ -435,19 +481,16 @@ nav a.active {
  /* CIRCULO DE COLORES */
 .color-circle-container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
-	height: 100vh;
-	margin: 0;
-	margin-top: 4%;
-	margin-bottom: 4%;
+	justify-content: center;
+	height: auto;
   }
   
   .circle-container {
 	position: relative;
-	width: 100px;
-	height: 100px;
-	margin-bottom: 50px;
+	width: 400px;
+	height: 400px;
   }
   
   .color-circle {
@@ -457,51 +500,25 @@ nav a.active {
 	border-radius: 50%;
 	cursor: pointer;
 	transition: transform 0.2s;
+	z-index: 1;
   }
-  
-  .color-circle:hover {
-	transform: scale(1.2);
-  }
-  
+    
   .color-info {
-	display: none;
+	opacity: 0;
 	position: absolute;
-	top: 30%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	background: rgba(255, 255, 255, 0.9);
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	z-index: 10;
+	z-index: 2;
+	width: auto;
+	pointer-events: none;
   }
-  
-  .color-info-small {
-	display: none;
-	position: absolute;
-	top: 70%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: rgba(255, 255, 255, 0.9);
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	z-index: 10;
-  }
-  
-  .color-info {
-	width: 250px;
-  }
-  
-  .color-info-small {
-	width: 220px;
-	padding: 10px;
-	font-size: 0.9em;
-  }
-  
-  .color-circle:hover + .color-info,
-  .color-circle:hover + .color-info + .color-info-small {
+      
+  .color-circle:hover + .color-info {
 	display: block;
+	opacity: 1;
+	transition: opacity .2s ease-in;
   }
   
   /* Positioning the color circles */
@@ -528,10 +545,77 @@ nav a.active {
 
 /*OTROS USOS DEL COLOR*/
 
-.otros-usos-color {
-	text-align: center;
+.otrosusos-card-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: auto;
+}
+
+.otrosusos-card-container#biology {
+	justify-content: center;
+	column-gap: 25%;
+}
+
+.otrosusos-card {
+	width: 24rem;
+	height: 36rem;
+	border-radius: 10px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.otrosusos-card img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .3s ease-out;
+}
+
+.otrosusos-card h3 {
+	position: absolute;
+    inset: 500px auto 10px auto;
+    margin: auto;
+    transition: inset .5s ease-out;
+    text-transform: uppercase;
+	word-wrap: break-word;
+	opacity: 10%;	
   }
 
+.otrosusos-card p {
+	inset: auto auto 80px 30px;
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+}
+
+.otrosusos-card:hover h3 {
+    inset: 10% auto 300px auto;
+    transition: inset .3s ease-in;
+	color:black;
+	opacity: 100%;
+  }
+  
+.otrosusos-card:hover p {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+	margin: auto;
+  }
+  
+.otrosusos-card:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 0.2;
+  }
+
+/*RECURSOS Y HERRAMIENTAS*/
 .logo-tools-container {
 	position: relative;
 	display: flex;
@@ -560,6 +644,7 @@ nav a.active {
 	object-fit: contain;
   }
 
+/* VIDEO ON HOMEPAGE */
 .video {
 	max-width: 100%;
 	margin: 0 auto;
@@ -568,4 +653,28 @@ nav a.active {
 .video video {
 	width: 100%;
 	height: auto;
+}
+
+/* IMAGENES DE PALETAS EN HOME*/
+
+section#palettes {
+	text-align: center;
+	width: 100%;
+}
+
+section#palettes h2 {
+	text-transform: uppercase;
+}
+
+.palettes-img-container {
+	display: flex;
+	flex-flow: column nowrap;
+	row-gap: 20px;
+}
+
+.palettes-img-container img {
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: 25%;
 }
