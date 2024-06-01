@@ -1,17 +1,24 @@
 @charset "utf-8";
 /* CSS Document */
+:root{
+	width: 100%;
+	height: 100%;
+}
+
 body {
 	font: 14px/22px "Montserrat", sans-serif;
 	font-optical-sizing: auto;
-	background-color: #F6F5F2;
+	background-color: #fff;
+	margin: 0;
 }
 
-main {
+.main {
 	width: 80%;
 	margin: auto;
+	padding: 2% 0;
 }
 
-main h1 {
+.main h1 {
 	font-size: 40px;
 }
 
@@ -20,6 +27,7 @@ h1{
 	color:#c14d4d;
 	text-align: center;
 	width: 100%;
+	text-transform: uppercase;
 }
 
 h2, h3{
@@ -28,6 +36,10 @@ h2, h3{
 	color:#c14d4d ;
 	width: 100%;
 	text-align: center;
+}
+
+h3 {
+	margin: 0;
 }
 
 p {
@@ -41,16 +53,31 @@ a{
 }
 
 hr {
-	border: 1px solid #F0EBE3;
+	border: 1px solid #edd3d7;
 }
 
 header {
-	background: #dea0a0;
+	background:#edd3d7;
 	color: #fff;
 	align-content: center;
 }
 
-.container {
+section {
+	width: 80%;
+	margin: auto;
+}
+
+.bg-wrapper {
+	background-color: #edd3d7b9;
+	width: 100%;
+	height: 100%;
+	background: -moz-linear-gradient(top,  #edd3d7b9 0%, #edd3d7b9 50%, #edd3d7b9 75%, #fff 100%);
+	background: -webkit-linear-gradient(top,  #edd3d7b9 0%,#edd3d7b9 50%,#edd3d7b9 75%,#fff 100%);
+	background: linear-gradient(to bottom,  #edd3d7b9 0%,#edd3d7b9 50%,#edd3d7b9 75%,#fff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edd3d7b9', endColorstr='#fff',GradientType=0 );
+}
+
+.container-logo {
 	overflow: hidden;
 	display: flex;
 	flex-flow: row nowrap;
@@ -69,7 +96,7 @@ header {
 	height: 300px;
 }
 
-.container h1{
+.container-logo h1{
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -77,10 +104,12 @@ header {
 	width: auto;
 	font-size: 100px;
 	line-height: 100px;
+	color: #dea0a0;
+	
 }
 
 nav {
-	background-color: #b30059;
+	background-color: #dea0a0;
 	width: 100%;
 	height: 55px;
 	overflow: hidden;
@@ -93,12 +122,15 @@ nav a {
 	list-style-type: none;
 	text-align: center;
 	color: #fff;
-	padding: 15px 15px;
+	text-transform: uppercase;
+	font-weight:bolder;
+	font-size: larger;
+	padding: 16px 15px;
 }
 
 nav a:hover {
-	background-color: #fff;
-	color: black;
+	background-color: #edd3d7;
+	color: #c14d4d;
 }
 
 nav a.active {
@@ -120,6 +152,7 @@ nav a.active {
 	margin: 10px;
 	border-radius: 30px;
 	padding: 2% 5%;
+	background-color: #fff;
 	box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.50);
 }
 
@@ -171,10 +204,10 @@ nav a.active {
 }
 
 .apc-art3 {
-
+	text-align: center;
 }
 
-.apc-art3 hgroup h2,p{
+.apc-art3 hgroup h2, .apc-art3 hgroup p{
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -185,9 +218,8 @@ nav a.active {
 	text-align: center;
 }
  section#home {
-	background: #edd3d7;
-	color: #d38585;
-	 text-align: center;
+	background: #fff;
+	text-align: center;
 }
  section#about, section#contact {
 	background: #fff;
@@ -296,7 +328,111 @@ nav a.active {
  #bot4:hover ~ .tira {
 	left: -46vw;
 }
- 
+
+/* PSICOLOGIA DEL COLOR*/
+
+.psy-color-reaction-effect-container {
+	display: flex;
+	align-items: baseline;
+	gap: 3%;
+	padding: 3%;
+	width: 100%;
+	position: relative;
+}
+
+.psy-color-reaction-effect-container > * {
+	flex: 1;
+	text-align: center;
+}
+
+.psy-color-reaction {
+	position: relative;
+}
+
+.psy-color-reaction-img{
+	background-image: url(imagenes/colorwave.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 600px;
+	height: 300px;
+	margin: 5% auto 0 auto;
+}
+
+#sub-header {
+	text-align: center;
+}
+
+.psy-color-classification-hot-cold{
+	width: 100%;
+}
+
+.psy-color-classification-hot-cold p{
+	width: 80%;
+	margin: auto;
+}
+
+.psy-color-classification-hot-cold-img{
+	text-align: center;
+}
+
+.psy-color-classification-hot-cold-img-caption{
+	display: flex;
+	margin: auto;
+	justify-content: space-between;
+	width: 100%;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#psy-color-classification-hot-cold-png {
+	background-image: url(imagenes/hotcold.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+	height: 45em;
+	margin: auto;
+}
+
+.psy-color-classification-card{
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1em;
+	padding: 2%;
+}
+
+.psy-color-classification-card h3{
+	text-transform: uppercase;
+}
+
+.psy-color-classification-card-row{
+	border-radius: 30px;
+	padding: 2em;
+	height: 30em;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	align-items: stretch;
+	box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.50);
+	margin: 2%;
+}
+
+.psy-color-classification-card-row h3{
+	width: 100%;
+	flex-basis: 100%;
+}
+
+.psy-color-classification-card-row-img {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+#psy-color-classification-card-row-img-p {
+	flex: 0 0 100%;
+	width: 100%;
+}
+
+ /* CIRCULO DE COLORES */
 .color-circle-container {
 	display: flex;
 	flex-direction: column;
@@ -387,5 +523,49 @@ nav a.active {
   footer div {
 	display: block;
 	align-items: center;
-	
+
   }
+
+/*OTROS USOS DEL COLOR*/
+
+.otros-usos-color {
+	text-align: center;
+  }
+
+.logo-tools-container {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+    width: 100%;
+	height: auto;
+	align-items: baseline;
+	padding-top: 3%;
+  }
+
+
+.logo-tools-container-item {
+	width: 300px;
+	height: auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	flex: 0;
+	text-align: center;
+}
+
+.logo-tools-container-item img {
+	width: 300px;
+    height: 300px;
+	object-fit: contain;
+  }
+
+.video {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.video video {
+	width: 100%;
+	height: auto;
+}
