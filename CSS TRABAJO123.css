@@ -16,10 +16,21 @@ body {
 	width: 80%;
 	margin: auto;
 	padding: 2% 0;
+	display: flex;
+	flex-flow: column nowrap;
+	flex-wrap: nowrap;
+}
+
+.main > * {
+	flex: 1;
 }
 
 .main h1 {
 	font-size: 40px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	line-height: normal;
 }
 
 h1{
@@ -52,7 +63,7 @@ h4 {
 
 p {
 	color:#333333;
-	font-size: 15px;
+	font-size: 1.2em;
 }
 
 a{
@@ -119,7 +130,7 @@ section {
 nav {
 	background-color: #dea0a0;
 	width: 100%;
-	height: 55px;
+	height: auto;
 	overflow: hidden;
 	display: flex;
 	flex-flow: row nowrap; 
@@ -134,7 +145,6 @@ nav a {
 	font-weight:bolder;
 	font-size: larger;
 	padding: 16px 15px;
-	margin: 1 1;
 }
 
 nav a:hover {
@@ -142,20 +152,16 @@ nav a:hover {
 	color: #c14d4d;
 }
 
-nav a.active {
-	background-color: #04AA6D;
-	color: white;
-}
-
 /* APLICACIONES DEL COLOR*/
 
 .apc-art-container {
 	display: flex;
 	flex-flow: column nowrap;
+	position: relative;
 }
 
 .apc-art-container > * {
-	flex: 1;
+	flex: 0;
 }
 
 .grid-wrapper {
@@ -206,21 +212,19 @@ nav a.active {
 .apc-art2-flexbox-container {
 	width:100%;
 	height:100%;
-	text-align: center;
-	margin: auto;
+	margin: 0 auto;
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row;
 	justify-content: space-between;
-	align-items: baseline;
+	align-items: stretch;
 }
 
 .apc-art2-flexbox-container div{
 	flex: 1 1 100%;
-	text-align: center;
-	margin: auto;
+	margin: 0 auto;
 	padding: 1%;
 	width: 300px;
-	height: 200px;
+	height: auto;
 }
 
 .apc-art3-header {
@@ -238,21 +242,19 @@ nav a.active {
 .apc-art3-flexbox-container {
 	width:100%;
 	height:100%;
-	text-align: center;
-	margin: auto;
+	margin: 0 auto;
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row;
 	justify-content: space-between;
-	align-items: baseline;
+	align-items: stretch;
 }
 
 .apc-art3-flexbox-container div{
 	flex: 1 1 100%;
-	text-align: center;
-	margin: auto;
+	margin: 0 auto;
 	padding: 1%;
 	width: 300px;
-	height: 200px;
+	height: auto;
 }
 
  section {
